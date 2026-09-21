@@ -1,0 +1,257 @@
+:root {
+    --bg-primary: #fdfbf7;
+    --bg-secondary: #f4efe6;
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --accent: #27272a;
+    --accent-hover: #3f3f46;
+    --border-color: #e4e4e7;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 0 16px;
+}
+
+.site-header {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.site-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.site-nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-contact-btn {
+    background-color: var(--accent);
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.hero {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.status-indicator {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: var(--bg-secondary);
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.top-contact-link {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero-greeting {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.hero-name {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.hero-role {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.hero-summary {
+    color: var(--text-secondary);
+}
+
+.hero-visual {
+    width: 100%;
+}
+
+.hero-photo {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--text-secondary);
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.experience-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.exp-meta span{
+    display: block;
+    color: var(--text-secondary);
+    font-size: 13px;
+    padding-top: 4px;
+}
+
+.experience-item ul {
+    margin-top: 12px;
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.skill-group h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.skill-group p {
+    color: var(--text-secondary);
+}
+
+.resume-card {
+    background-color: var(--bg-secondary);
+    padding: 32px;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.resume-download-btn {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--accent);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.contact-details a {
+    color: var(--text-primary);
+}
+
+.site-footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .hero-name {
+        font-size: 64px;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        /* align-items: center; */
+    }
+
+    .hero-text-block, .hero-visual {
+        flex: 1;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 11px;
+    }
+    .hero-name {
+        font-size: 32px;
+    }
+}
